@@ -1,38 +1,90 @@
-.App {
+:root {
+  --primary: #1D4ED8;   /* Indigo */
+  --secondary: #10B981; /* Emerald */
+  --background: #F9FAFB;
+  --dark: #111827;
+  --error: #EF4444;
+  --accent: #F59E0B;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--background);
+}
+button{
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+button:hover{
+  background-color: #6A1B9A;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.card img{
+  width: 200px;
+  height:150px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navbar{
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  padding: 5px 20px;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background-color: #1E2A78;
+  color: var(--background);
+}
+li{
+  display: inline-block;
+}
+li a{
+  text-decoration: none;
+  margin-right: 10px;
+  font-size: 20px;
+  color: var(--background);
+}
+.ad{
+  display: flex;
+  align-items: center;
+  width: 90%;
+  margin: auto;
+  justify-content: space-between;
+}
+.cart-container,.wishlist {
+  padding: 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+.cart-item,.cart-wishlist {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+}
+a{
+  text-decoration: none;
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  font-size: 15px;
 }
